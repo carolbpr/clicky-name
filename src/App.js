@@ -1,23 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+const style = {
+  navbar: {
+    backgroundColor: "purple"
+  }
+};
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <nav class="navbar navbar-dark" style={{ backgroundColor: "#4D90FE" }}>
+          <span class="navbar-brand mb-0 h1">Clicky Game</span>
+          <span class="navbar-text text-center" style={{justifyContent:"center"}}>Click an image to begin!</span>
+          <span class="navbar-text text-center" style={{justifyContent:"center"}}>SCORE WILL GO HERE</span>
+        </nav>
       </header>
     </div>
   );
