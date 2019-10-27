@@ -1,6 +1,7 @@
 import React from "react";
 
 function NavBar(props) {
+  console.log(props);
   return (
     <div style={{ fontFamily: "Comfortaa, cursive" }}>
       <nav
@@ -21,13 +22,13 @@ function NavBar(props) {
             />
           </li>
           <li style={{ width: "30%", display: "inline-block", float: "none" }}>
-            <h3>Click an image to begin!</h3>
+            <h4>{props.message}</h4>
           </li>
           <li
             className="navbar-text"
             style={{ width: "30%", display: "inline-block", float: "none" }}
           >
-            <h2>SCORE:{props.score}| TOP SCORE:{props.topScore}</h2>
+            <h3>SCORE: {props.score} | TOP SCORE: {props.topScore}</h3>
           </li>
         </ul>
       </nav>
