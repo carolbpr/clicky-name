@@ -1,23 +1,35 @@
-import React from "react";
+import React, { Component } from "react";
+import Message from "./components/MainMessage";
+import Wraper from "./components/Wrapper";
+import ImgClick from "./components/ImgClick/ImgClick";
+import NavBar from "./components/NavBar";
+import Images from "./Images.json";
 
-const style = {
-  navbar: {
-    backgroundColor: "purple"
+class App extends Component {
+  // Setting this.state.Images to the friends json array
+  state = {
+    Images
+  };
+
+  // Map over this.state.friends and render a FriendCard component for each friend object
+  render() {
+    return (
+      <div>
+      <NavBar/>
+      <Message/>
+      <div style={{backgroundImage:"url(/background.jpeg)"}}>
+      <Wraper>
+        
+        {this.state.Images.map(image => (
+            <ImgClick alt={image.name} src={image.src}/>
+          
+        ))}
+        
+      </Wraper>
+      </div>
+      </div>
+    );
   }
-};
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <nav class="navbar navbar-dark" style={{ backgroundColor: "#4D90FE" }}>
-          <span class="navbar-brand mb-0 h1">Clicky Game</span>
-          <span class="navbar-text text-center" style={{justifyContent:"center"}}>Click an image to begin!</span>
-          <span class="navbar-text text-center" style={{justifyContent:"center"}}>SCORE WILL GO HERE</span>
-        </nav>
-      </header>
-    </div>
-  );
 }
 
 export default App;

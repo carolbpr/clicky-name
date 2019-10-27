@@ -1,0 +1,17 @@
+.wrapper {
+
+  background: transparent;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  font-family: "Comfortaa, cursive";
+  width: 75%;
+  justify-content: space-around;
+  align-content:center;
+  overflow: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+
+
+  
+}
