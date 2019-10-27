@@ -1,6 +1,6 @@
 import React from "react";
 
-function NavBar() {
+function NavBar(props) {
   return (
     <div style={{ fontFamily: "Comfortaa, cursive" }}>
       <nav
@@ -27,7 +27,7 @@ function NavBar() {
             className="navbar-text"
             style={{ width: "30%", display: "inline-block", float: "none" }}
           >
-            <h2>SCORE WILL GO HERE</h2>
+            <h2>SCORE:{props.score}| TOP SCORE:{props.topScore}</h2>
           </li>
         </ul>
       </nav>
