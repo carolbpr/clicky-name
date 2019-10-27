@@ -33,7 +33,10 @@ class App extends Component {
     let image = name;
     console.log(image);
     if (clickedImg.includes(image)) {
-      this.setState({ score: 0, message: "You guessed incorrectly!" });
+      this.setState({
+        score: 0,
+        message: "You guessed incorrectly!"
+      });
       clickedImg = [];
     } else if (!clickedImg.includes(image)) {
       clickedImg.push(image);
@@ -45,7 +48,7 @@ class App extends Component {
       let score = this.state.score + 1;
       if (score > this.state.topScore) {
         this.setState({ topScore: this.state.score + 1 });
-        if (this.state.topScore +1 === 12) {
+        if (this.state.topScore + 1 === 12) {
           this.setState({
             score: 0,
             topScore: 0,
@@ -73,6 +76,7 @@ class App extends Component {
           <Wraper>
             {Images.map(image => (
               <ImgClick
+                style={this.state.action}
                 alt={image.name}
                 src={image.src}
                 onClick={() => {

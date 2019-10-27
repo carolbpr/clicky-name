@@ -6,7 +6,7 @@ console.log(Images);
   return (
     <div className="card container">
       <div className="img-container">
-        <img alt={Images.name} src={Images.src} onClick={Images.onClick} />
+        <img style = {Images.style} alt={Images.name} src={Images.src} onClick={Images.onClick} />
       </div>
     </div>
   );
