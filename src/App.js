@@ -21,8 +21,8 @@ class App extends Component {
   // Setting this.state.Images to the friends json array
   state = {
     Images: shuffleArray(Images),
-    score: 11,
-    topScore: 11,
+    score: 0,
+    topScore: 0,
     message: "Click an image to begin!"
   };
   shuffleThis = () => {
