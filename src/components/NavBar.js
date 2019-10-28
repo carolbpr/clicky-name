@@ -16,7 +16,7 @@ function NavBar(props) {
         <ul style={{ width: "100%" }}>
           <li style={{ width: "40%", display: "inline-block", float: "none" }}>
             <img
-              src={"../clicky-game-logo.png"}
+              src={"./public/clicly-game-logo.png"}
               style={{ width: "80%" }}
               alt="GameLogo"
             />
