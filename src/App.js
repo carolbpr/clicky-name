@@ -72,11 +72,10 @@ class App extends Component {
           topScore={this.state.topScore}
         />
         <Message />
-        <div style={{ backgroundImage: "url(/background.jpeg)" }}>
+        <div style={{ backgroundImage: "url(./background.jpeg)" }}>
           <Wraper>
             {Images.map(image => (
               <ImgClick
-                style={this.state.action}
                 alt={image.name}
                 src={image.src}
                 onClick={() => {
